@@ -412,6 +412,7 @@ animation = &"chopping_right"
 autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_viwsh")
 

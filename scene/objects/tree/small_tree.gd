@@ -10,8 +10,8 @@ func _ready() -> void:
 	damage_component.max_damage_reached.connect(os_max_damage_reached)
 
 
-func _process(delta: float) -> void:
-	print(material.get_shader_parameter("shake_intensity"))
+#func _process(delta: float) -> void:
+	#print(material.get_shader_parameter("shake_intensity"))
 
 
 func on_hurt(hit_damage: int) -> void: # Quando sinal foir disparado, chama metodo de dano de HitComponent

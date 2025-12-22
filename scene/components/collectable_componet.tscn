@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dcxlpgsav45sp" path="res://scene/components/collectable_componet.gd" id="1_xruiq"]
 
 [node name="CollectableComponet" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_xruiq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
