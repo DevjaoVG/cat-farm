@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bi2pp6vmql3hi" path="res://scene/components/collectable_componet.tscn" id="2_t1g35"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dd724"]
-radius = 8.0
+radius = 7.0
 
 [node name="Milk" type="Sprite2D"]
 texture = ExtResource("1_8gake")

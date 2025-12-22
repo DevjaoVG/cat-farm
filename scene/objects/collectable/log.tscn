@@ -7,7 +7,6 @@
 radius = 7.017834
 
 [node name="Log" type="Sprite2D"]
-position = Vector2(0, -2)
 texture = ExtResource("1_ao2w0")
 hframes = 9
 vframes = 5
