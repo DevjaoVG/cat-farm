@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://bodl6fk4xacfw"]
+
+[ext_resource type="Shader" uid="uid://bgyhhqqt5k1b2" path="res://scene/objects/largeTree/tree_shaders.gdshader" id="1_ounub"]
+[ext_resource type="Texture2D" uid="uid://cfnw1nxekkst2" path="res://art/objects/basic_grass_biom_things.png" id="2_0iq73"]
+[ext_resource type="Script" uid="uid://dgo3h3c0160ck" path="res://scene/objects/largeTree/large_tree.gd" id="3_nelvi"]
+[ext_resource type="PackedScene" uid="uid://chhmk3ageilmi" path="res://scene/components/hurt_component.tscn" id="4_masa0"]
+[ext_resource type="PackedScene" uid="uid://dx7d8wjodp3ku" path="res://scene/components/damage_component.tscn" id="5_xmeab"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_buiah"]
+resource_local_to_scene = true
+shader = ExtResource("1_ounub")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mb02"]
+radius = 3.1622777
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wkdqh"]
+radius = 4.1231055
+
+[node name="LargeTree" type="Sprite2D"]
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_buiah")
+position = Vector2(0, -2)
+texture = ExtResource("2_0iq73")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 32)
+script = ExtResource("3_nelvi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_0mb02")
+
+[node name="HurtComponent" parent="." instance=ExtResource("4_masa0")]
+tool = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_wkdqh")
+debug_color = Color(0.8322799, 0.001388861, 0.94159424, 0.41960785)
+
+[node name="DamageComponent" parent="." instance=ExtResource("5_xmeab")]
+max_damage = 3

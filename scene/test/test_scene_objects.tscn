@@ -20,7 +20,7 @@ tile_set = ExtResource("1_pek0w")
 
 [node name="Tree" type="TileMapLayer" parent="GameTileMap"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAOAAsAAAAAAAAAAgAQAAwAAAAAAAAAAgASAAsAAAAAAAAAAgAQAAoAAAAAAAAAAgA=")
+tile_map_data = PackedByteArray("AAAOAAsAAAAAAAAAAgAQAAwAAAAAAAAAAgASAAsAAAAAAAAAAgAQAAoAAAAAAAAAAgALAAgAAAAAAAAABAANAAgAAAAAAAAABAAMAAkAAAAAAAAABAA=")
 tile_set = ExtResource("1_pek0w")
 
 [node name="Rock" type="TileMapLayer" parent="GameTileMap"]
