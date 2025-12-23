@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://hd3hr3d8iwec"]
+[gd_scene load_steps=4 format=4 uid="uid://hd3hr3d8iwec"]
 
 [ext_resource type="TileSet" uid="uid://cx6w7pusha614" path="res://tileassets/game_tile_asset.tres" id="1_pek0w"]
 [ext_resource type="PackedScene" uid="uid://c3ghypenvyr1n" path="res://scene/characters/player/player.tscn" id="2_4ueue"]
+[ext_resource type="PackedScene" uid="uid://c0kgjysnrltui" path="res://scene/ui/game_screen.tscn" id="3_8sm4u"]
 
-[node name="TestSceneTileMap" type="Node2D"]
+[node name="TestSceneObjects" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(6, 45)
 
 [node name="GameTileMap" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -32,3 +32,5 @@ tile_set = ExtResource("1_pek0w")
 [node name="Player" parent="." instance=ExtResource("2_4ueue")]
 y_sort_enabled = true
 position = Vector2(181, 188)
+
+[node name="GameScreen" parent="." instance=ExtResource("3_8sm4u")]

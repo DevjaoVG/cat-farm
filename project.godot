@@ -15,6 +15,10 @@ run/main_scene="uid://hd3hr3d8iwec"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*res://scripts/globals/tool_manager.gd"
+
 [display]
 
 window/size/viewport_width=640
