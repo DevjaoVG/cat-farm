@@ -5,6 +5,7 @@
 
 [node name="TestSceneTileMap" type="Node2D"]
 y_sort_enabled = true
+position = Vector2(6, 45)
 
 [node name="GameTileMap" type="Node2D" parent="."]
 y_sort_enabled = true

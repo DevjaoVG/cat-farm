@@ -28,6 +28,6 @@ func os_max_damage_reached() -> void: # Quando o sinal for disparado significa q
 	
 func add_stone_scene() -> void: # Adiciona a Cena Log quando a arvore for quebrada
 	var log_instance = log_scene.instantiate() as Node2D
-	log_instance.global_position = global_position
 	get_parent().add_child(log_instance)
+	log_instance.global_position = global_position
 	

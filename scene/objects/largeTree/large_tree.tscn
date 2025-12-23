@@ -12,17 +12,17 @@ shader = ExtResource("1_ounub")
 shader_parameter/shake_intensity = 0.0
 shader_parameter/shake_speed = 20.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0mb02"]
-radius = 3.1622777
+[sub_resource type="CircleShape2D" id="CircleShape2D_ounub"]
+radius = 5.0249376
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wkdqh"]
-radius = 4.1231055
+radius = 3.0
 
 [node name="LargeTree" type="Sprite2D"]
 y_sort_enabled = true
 material = SubResource("ShaderMaterial_buiah")
-position = Vector2(0, -2)
 texture = ExtResource("2_0iq73")
+offset = Vector2(0, -10)
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 32)
 script = ExtResource("3_nelvi")
@@ -30,14 +30,15 @@ script = ExtResource("3_nelvi")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 11)
-shape = SubResource("CircleShape2D_0mb02")
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ounub")
 
 [node name="HurtComponent" parent="." instance=ExtResource("4_masa0")]
+position = Vector2(0, 1)
 tool = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(0, 11)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_wkdqh")
 debug_color = Color(0.8322799, 0.001388861, 0.94159424, 0.41960785)
 
