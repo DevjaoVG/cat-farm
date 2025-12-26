@@ -2,7 +2,7 @@
 
 **Cat-Farm** é um jogo top-down inspirado em **Stardew Valley**, desenvolvido em Godot, onde você controla um gatinho fazendeiro em um mundo aconchegante habitado por NPCs felinos. Plante, explore, interaja e construa sua fazenda cheia de charme e personalidade.
 
-![Gameplay](./art/demonstration/gameplay.gif)
+![Gameplay](art/demons/gameplay.gif)
 
 ## 📌 Sobre o Projeto
 
