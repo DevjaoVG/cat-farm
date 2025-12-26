@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://cy7m0lv0ptxcy"]
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://cy7m0lv0ptxcy"]
 
-[ext_resource type="Texture2D" uid="uid://dcd7beypxc4is" path="res://art/ui/basic_ui_sprites.png" id="1_relnd"]
+[ext_resource type="Texture2D" uid="uid://dcd7beypxc4is" path="res://assets/ui/basic_ui_sprites.png" id="1_5m4du"]
+[ext_resource type="FontVariation" uid="uid://dvxq44b5oauph" path="res://assets/font/zx_palm_variation.tres" id="2_c52pb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_relnd"]
-atlas = ExtResource("1_relnd")
+atlas = ExtResource("1_5m4du")
 region = Rect2(201, 105, 30, 30)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c52pb"]
@@ -14,11 +15,19 @@ texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 region_rect = Rect2(0, 0, 30, 30)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_relnd"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-1dbb522877a7a000937783a8fe6ae016.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m4du"]
+atlas = ExtResource("1_5m4du")
+region = Rect2(107, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7bnte"]
+texture = SubResource("AtlasTexture_5m4du")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c52pb"]
-atlas = SubResource("CompressedTexture2D_relnd")
+atlas = ExtResource("1_5m4du")
 region = Rect2(11, 11, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5m4du"]
@@ -28,11 +37,8 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7bnte"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-1dbb522877a7a000937783a8fe6ae016.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6h4aa"]
-atlas = SubResource("CompressedTexture2D_7bnte")
+atlas = ExtResource("1_5m4du")
 region = Rect2(11, 59, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h45om"]
@@ -42,11 +48,8 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h70mn"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-1dbb522877a7a000937783a8fe6ae016.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7rlx"]
-atlas = SubResource("CompressedTexture2D_h70mn")
+atlas = ExtResource("1_5m4du")
 region = Rect2(11, 107, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7l3f"]
@@ -57,7 +60,7 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h45om"]
-atlas = ExtResource("1_relnd")
+atlas = ExtResource("1_5m4du")
 region = Rect2(11, 155, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h70mn"]
@@ -67,11 +70,8 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_60u0t"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-1dbb522877a7a000937783a8fe6ae016.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ho5kp"]
-atlas = SubResource("CompressedTexture2D_60u0t")
+atlas = ExtResource("1_5m4du")
 region = Rect2(11, 59, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8mnvm"]
@@ -82,8 +82,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
 [resource]
-DarkWoodPanel/base_type = &"PanelContainer"
+DarkWoodPanel/base_type = &"pane"
 DarkWoodPanel/styles/panel = SubResource("StyleBoxTexture_c52pb")
+InventoryLable/base_type = &"Label"
+InventoryLable/font_sizes/font_size = 8
+InventoryLable/fonts/font = ExtResource("2_c52pb")
+InventoryPanel/base_type = &"PanelContainer"
+InventoryPanel/styles/panel = SubResource("StyleBoxTexture_7bnte")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10

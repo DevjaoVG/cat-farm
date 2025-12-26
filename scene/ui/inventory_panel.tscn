@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://diuqna35onyup"]
+
+[ext_resource type="Theme" uid="uid://cy7m0lv0ptxcy" path="res://scene/ui/game_ui_theme.tres" id="1_hgt5h"]
+[ext_resource type="Script" uid="uid://bcipqcy4l41xw" path="res://scene/ui/inventory_panel.gd" id="2_7fxoo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgt5h"]
+load_path = "res://.godot/imported/basic_tools_and_meterials.png-fe3b87a86047acad0ee681f8091b67a1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fxoo"]
+atlas = SubResource("CompressedTexture2D_hgt5h")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tuue8"]
+load_path = "res://.godot/imported/basic_tools_and_meterials.png-fe3b87a86047acad0ee681f8091b67a1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atueq"]
+atlas = SubResource("CompressedTexture2D_tuue8")
+region = Rect2(16, 16, 16, 16)
+
+[node name="InventoryPanel" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_hgt5h")
+theme_type_variation = &"DarkWoodPanel"
+script = ExtResource("2_7fxoo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Stone" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"InventoryPanel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stone"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_7fxoo")
+
+[node name="StoneLabel" type="Label" parent="MarginContainer/VBoxContainer/Stone"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_type_variation = &"InventoryLable"
+text = "0"
+
+[node name="Log" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"InventoryPanel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Log"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_atueq")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Log"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_type_variation = &"InventoryLable"
+text = "0"

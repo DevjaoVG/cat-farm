@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ToolManager="*res://scripts/globals/tool_manager.gd"
+InventoryManager="*res://scripts/globals/inventory_manager.gd"
 
 [display]
 
@@ -32,7 +33,8 @@ window/stretch/scale_mode="integer"
 
 folder_colors={
 "res://art/": "blue",
-"res://scene/": "red",
+"res://assets/": "red",
+"res://scene/": "orange",
 "res://scripts/": "yellow",
 "res://tileassets/": "teal"
 }
