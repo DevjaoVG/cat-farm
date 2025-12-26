@@ -21,21 +21,7 @@ tile_map_data = PackedByteArray("AAAQAAkABwABAAEAAAAPAAkABwABAAEAAAAOAAkABwABAAE
 tile_set = ExtResource("1_i1in7")
 
 [node name="Nature" type="TileMapLayer" parent="GameTileMap"]
-tile_map_data = PackedByteArray("AAASAAoACAADAAAAAAAVAAwACAAFAAAAAAAVAAoACAAGAAAAAAA=")
 tile_set = ExtResource("1_i1in7")
-
-[node name="Player" parent="GameTileMap"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-position = Vector2(493, 185)
-script = null
 
 [node name="Player" parent="." instance=ExtResource("2_75dgx")]
 position = Vector2(183, 162)
